@@ -4,11 +4,11 @@
 
 def greater(a, b, c):
     if a > b and a > c:
-        return f"a = {a} is greatest"
+        return f"a = {a} is the greatest"
     elif b > a and b > c:
-        return f"b = {b} is greatest"
+        return f"b = {b} is the greatest"
     else:
-        return f"c = {c} is greatest"
+        return f"c = {c} is the greatest"
     
 print(greater(2, 3, 4))
 print(greater(7, 2, 5))
