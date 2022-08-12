@@ -6,9 +6,7 @@
 def check_starts_on_if():
     s = input("Input a string:")
     s = s.lower()
-    if s[0] == 'i' and s[1] == 'f':
-        print('true')
-    else:
-        print('false')
+    return s[0] == 'i' and s[1] == 'f'
 
-check_starts_on_if()
+
+print(check_starts_on_if())
