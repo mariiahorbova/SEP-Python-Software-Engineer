@@ -131,7 +131,7 @@ def most_occured(arr):
     return occurence
 
 
-print("\nThe most occurred item")
+print("\nFrequency of numbers:")
 print(most_occured([10, 20, 30, 40, 10, 10, 20]))
 
 

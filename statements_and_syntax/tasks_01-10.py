@@ -14,7 +14,7 @@ def check_value_in_array(value):
     arr = ["Red", "Green", "Blue", "White"]
     print(f"Check if '{value}' in color array!")
 
-    return True if value in arr else False
+    return value in arr
 
 
 print(check_value_in_array('Green'))
@@ -30,7 +30,7 @@ print(check_value_in_array('White'))
 # false
 
 def check_seven(nums):
-    return True if nums[0] == 7 or nums[len(nums)-1] == 7 else False
+    return nums[0] == 7 or nums[len(nums)-1] == 7
 
 
 print("\nCheck seven")
@@ -102,11 +102,12 @@ print(sum_of_array([6, 8]))
 # [1, 2, 3, 4, 5, 6]
 
 def remove_duplicate(nums):
-    nums_unique = []
-    for num in nums:
-        if num not in nums_unique:
-            nums_unique.append(num)
-    return nums_unique
+    # nums_unique = []
+    # for num in nums:
+    #     if num not in nums_unique:
+    #         nums_unique.append(num)
+    # return nums_unique
+    return list(set(nums))
 
 
 print("\nUnique elements in array")
@@ -154,17 +155,23 @@ print(remove_blank(["Red", "", "", "Blue", "White"]))
 # ["Red", " Green", " Blue", " White"]
 # [1, 3, 4, 5, 7]
 
-def split_delimited():
-    colors = "Red, Green, Blue, White"
-    nums = "1, 3, 4, 5, 7"
-    s_colors = colors.split()
-    s_nums = nums.split(",")
-    s_int_nums = [int(x) for x in s_nums]
-    return s_colors, s_int_nums
-
+def split_delimited(string):
+    text = ""
+    numbers = []
+    for i in string:
+        if i == ",":
+            continue
+        elif(i.isdigit()):
+            numbers.append(i)
+        else:
+            text += i
+    text = text.split()
+    numbers = list(map(int, numbers))
+    return text, numbers
 
 print("\nSplit string into array")
-print(split_delimited())
+print(split_delimited("Red, Green, Blue, White, 1, 3, 4, 5, 7"))
+print(split_delimited("some text, input to function, 1 5 7, 9"))
 
 
 # 10. Write a Python program to create an array with the elements "rotated left" of a given array of ints length 3.

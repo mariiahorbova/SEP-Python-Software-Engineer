@@ -47,10 +47,7 @@ print(array_of_arrays([[1, 2, 3, 4], ["Ten", "Twenty",
 def three_or_five(arr):
     threes = arr.count(3)
     fives = arr.count(5)
-    if threes == 2 or fives == 2:
-        return True
-    else:
-        return False
+    return threes == 2 or fives == 2
 
 
 print("\nThrees or fives in a list")
