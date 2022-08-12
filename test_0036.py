@@ -1,7 +1,7 @@
 # 36. Write a Python program to check if the sequence of numbers 10, 20, 30 appears anywhere in a given array of integers.
 
 def appears_in_array(array):
-    return True if ((10 in array) or (20 in array) or (30 in array)) else False
+    return (10 in array) or (20 in array) or (30 in array)
 
 
 print(appears_in_array([12, 10, 15, 9]))
