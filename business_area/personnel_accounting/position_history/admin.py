@@ -1,3 +1,4 @@
 from django.contrib import admin
+from position_history.models import PositionHistory
 
-# Register your models here.
+admin.site.register(PositionHistory)

@@ -32,11 +32,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "rest_framework",
+
     "departments",
     "workers",
     "positions",
     "position_history",
     "vacations",
+
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

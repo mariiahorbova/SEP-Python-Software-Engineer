@@ -5,4 +5,4 @@ from departments.models import Department
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
-        fields = ["id", "title", "abbreviation", "workers_count"]
+        fields = ["id", "title", "abbreviation"]

@@ -1,4 +1,6 @@
 from django.db import models
+
+from departments.models import Department
 from positions.models import Position
 
 
@@ -17,7 +19,8 @@ class Worker(models.Model):
     address_house_number = models.IntegerField(blank=True, default="0")
     address_house_letter = models.CharField(max_length=5, blank=True, default="")
     vacation_days_left = models.IntegerField(blank=True, default="0")
-    id_position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True, blank=True)
+    position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True, blank=True)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         verbose_name = "Worker"
